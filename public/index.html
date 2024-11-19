@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat em Tempo Real</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div id="userInfo">
+            <input type="text" id="userName" placeholder="Digite seu nome" />
+            <button onclick="setUserName()">Definir Nome</button>
+        </div>
+        <div id="rooms">
+            <h2>Salas Disponíveis</h2>
+            <button onclick="joinRoom('Sala 1')">Entrar na Sala 1</button>
+            <button onclick="joinRoom('Sala 2')">Entrar na Sala 2</button>
+            <button onclick="joinRoom('Sala 3')">Entrar na Sala 3</button>
+        </div>
+        <div id="chat">
+            <div id="messages"></div>
+            <input type="text" id="messageInput" placeholder="Digite sua mensagem" />
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
